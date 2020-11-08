@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux'
 import {fetchBinders}from './actions/fetchBinders'
+import BindersContainer from './containers/BindersContainer'
 
 class App extends React.Component {
 
@@ -14,6 +15,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           hello
+          <BindersContainer />
         </header>
       </div>
     );
