@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
+import { connect } from 'react-redux'
+import {fetchBinders}from './actions/fetchBinders'
 
 class App extends React.Component {
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/v1/binders')
-    .then(r => r.json())
-    .then(res => console.log(res))
+    this.props.fetchBinders({type: 'FETCH_BINDERS', payload: {title: 'Japan'}})
   }
 
   render() {
@@ -21,4 +21,11 @@ class App extends React.Component {
   
 }
 
-export default App;
+// const mapStateToProps = (state) => {
+//   return {
+//     accounts: state.binders
+//   }
+// }
+
+
+export default connect(null, {fetchBinders})(App);
