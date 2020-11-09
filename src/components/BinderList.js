@@ -5,7 +5,7 @@ const BinderList = (props) => {
 
     return (
         <div>
-            {props.binders.map(binder => <li key={binder.id}>{binder.attributes.title}</li>)}
+            {props.binders.map(binder => <h2 key={binder.id}>{binder.attributes.title}</h2>)}
             
         </div>
     )
