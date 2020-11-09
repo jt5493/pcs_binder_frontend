@@ -1,6 +1,18 @@
 export default function binderReducer(state = {binders: []}, action) {
 
-    return action.payload
+    switch (action.type) {
+        case 'FETCH_BINDERS': 
+            return {
+                binders: action.payload.data
+            }
+            
+            
+    
+        default:
+            return state
+    }
+
+    
     
 
 
