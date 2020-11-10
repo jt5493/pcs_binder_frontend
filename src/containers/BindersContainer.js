@@ -27,6 +27,7 @@ class BindersContainers extends React.Component {
 
 }
 const mapStateToProps = (state) => {
+    
     return {
         binders: state.binders
     }

@@ -17,6 +17,7 @@ class BinderForm extends React.Component {
         event.preventDefault()
         
         this.props.addBinder(this.state)
+        this.setState({title: ''})
     }
 
 
