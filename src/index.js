@@ -6,6 +6,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import ReduxThunk from 'redux-thunk';
 import binderReducer from './reducers/binderReducer'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 
 
@@ -16,7 +17,9 @@ const store = createStore(binderReducer, composeEnhancers(applyMiddleware(ReduxT
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider >,
   document.getElementById('root')
 );
