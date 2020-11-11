@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          im from app.js
+          
           <BindersContainer />
         </header>
       </div>
