@@ -2,7 +2,7 @@ import React from 'react';
 import Binder from "../components/BinderShow";
 import { Route, Link } from "react-router-dom";
 
-const BinderList = (props) => {
+const NoteList = (props) => {
     
 
     return (
@@ -19,4 +19,4 @@ const BinderList = (props) => {
 
 }
 
-export default BinderList
+export default NoteList
