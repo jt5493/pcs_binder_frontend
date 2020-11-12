@@ -1,5 +1,5 @@
 import React from 'react';
-import Binder from "../components/BinderShow";
+
 import { Route, Link } from "react-router-dom";
 
 const DocumentList = (props) => {
@@ -7,10 +7,10 @@ const DocumentList = (props) => {
 
     return (
         <div>
-            {props.binders.map(binder => 
-            <h2 key={binder.id}>
-                <Link to={`/binders/${binder.id}`}>{binder.attributes.title}</Link>
-            </h2>)}
+            <h2>Documents:</h2>
+            {props.documents && props.documents.map(document =>
+                <li key={document.id}>{document.title}: {document.doc_path}</li>
+            )}
             
         </div>
     )

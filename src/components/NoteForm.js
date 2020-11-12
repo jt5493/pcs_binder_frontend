@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { addBinder } from "../actions/addBinder";
 
-class BinderForm extends React.Component {
+class NoteForm extends React.Component {
 
     state = {title: ''}
 
@@ -16,7 +16,7 @@ class BinderForm extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         
-        this.props.addBinder(this.state)
+        
         this.setState({title: ''})
     }
 
@@ -25,8 +25,8 @@ class BinderForm extends React.Component {
         return(
             <div>
                 <form onSubmit={this.handleOnSubmit}>
-                    <label>Binder Title: </label>
-                    <input type='text' placeholder='Binder Title' name="title" value={this.state.title} onChange={this.handleOnChange}/>
+                    <label>Note Title: </label>
+                    <input type='text' placeholder='Note Title' name="title" value={this.state.title} onChange={this.handleOnChange}/>
                     <input type="submit"/>
                 </form>
             </div>
@@ -34,4 +34,4 @@ class BinderForm extends React.Component {
     }
 }
 
-export default connect(null, {addBinder})(BinderForm)
+export default connect()(NoteForm)

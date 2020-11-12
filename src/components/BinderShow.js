@@ -15,9 +15,9 @@ const Binder = (props) => {
     return (
         <div>
             <h1>{binder ? binder.attributes.title : null}</h1>
-            <DocumentsContainer />
-            <LinksContainer />
-            <NotesContainer />
+            <DocumentsContainer binder={binder} /> <br/>
+            <LinksContainer binder={binder}/><br/>
+            <NotesContainer binder={binder}/><br/>
         </div>
     )
 

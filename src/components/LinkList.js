@@ -7,10 +7,10 @@ const LinkList = (props) => {
 
     return (
         <div>
-            {props.binders.map(binder => 
-            <h2 key={binder.id}>
-                <Link to={`/binders/${binder.id}`}>{binder.attributes.title}</Link>
-            </h2>)}
+            <h2>Links:</h2>
+            {props.links && props.links.map(link =>
+                <li key={link.id}>{link.title}: {link.url}</li>
+            )}
             
         </div>
     )

@@ -15,6 +15,7 @@ class BindersContainers extends React.Component {
     render() {
         return(
             <div>
+                
                 <Switch>
                     <Route path='/binders/new' component={BinderForm}/>
                     <Route path='/binders/:id' render={(routerProps) => <BinderShow {...routerProps} binders={this.props.binders}/>}/>
@@ -24,6 +25,7 @@ class BindersContainers extends React.Component {
             </div>
         )
     }
+    // switch makes so you go to the first path the matches the params
 
 
 

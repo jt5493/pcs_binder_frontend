@@ -7,10 +7,10 @@ const NoteList = (props) => {
 
     return (
         <div>
-            {props.binders.map(binder => 
-            <h2 key={binder.id}>
-                <Link to={`/binders/${binder.id}`}>{binder.attributes.title}</Link>
-            </h2>)}
+            <h2>Notes:</h2>
+            {props.notes && props.notes.map(note =>
+                <li key={note.id}>{note.title}: {note.content}</li>
+            )}
             
         </div>
     )
