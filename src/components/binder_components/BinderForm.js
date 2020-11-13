@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { addBinder } from "../actions/addBinder";
+import { addBinder } from "../../actions/binder_actions/addBinder";
 
-class LinkForm extends React.Component {
+class BinderForm extends React.Component {
 
     state = {title: ''}
 
@@ -16,7 +16,7 @@ class LinkForm extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         
-        
+        this.props.addBinder(this.state)
         this.setState({title: ''})
     }
 
@@ -25,8 +25,8 @@ class LinkForm extends React.Component {
         return(
             <div>
                 <form onSubmit={this.handleOnSubmit}>
-                    <label>Link Title: </label>
-                    <input type='text' placeholder='Link Title' name="title" value={this.state.title} onChange={this.handleOnChange}/>
+                    <label>Binder Title: </label>
+                    <input type='text' placeholder='Binder Title' name="title" value={this.state.title} onChange={this.handleOnChange}/>
                     <input type="submit"/>
                 </form>
             </div>
@@ -34,4 +34,4 @@ class LinkForm extends React.Component {
     }
 }
 
-export default connect()(LinkForm)
+export default connect(null, {addBinder})(BinderForm)

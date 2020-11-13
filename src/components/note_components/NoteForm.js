@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { addBinder } from "../actions/addBinder";
+import { addNote } from "../../actions/note_actions/addNote";
 
 class NoteForm extends React.Component {
 
-    state = {title: ''}
+    state = {title: '', content: ''}
 
     handleOnChange = (event) => {
         this.setState({
@@ -16,8 +16,9 @@ class NoteForm extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         
+        this.props.addNote(this.state, this.props.binder.id)
         
-        this.setState({title: ''})
+        this.setState({title: '', content: ''})
     }
 
 
@@ -26,7 +27,9 @@ class NoteForm extends React.Component {
             <div>
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Note Title: </label>
-                    <input type='text' placeholder='Note Title' name="title" value={this.state.title} onChange={this.handleOnChange}/>
+                    <input type='text' placeholder='Note Title' name="title" value={this.state.title} onChange={this.handleOnChange}/><br/>
+                    <label>Note Content:</label>
+                    <input type='text' placeholder='Note Content' name="content" value={this.state.content} onChange={this.handleOnChange}/><br/>
                     <input type="submit"/>
                 </form>
             </div>
@@ -34,4 +37,4 @@ class NoteForm extends React.Component {
     }
 }
 
-export default connect()(NoteForm)
+export default connect(null, {addNote})(NoteForm)

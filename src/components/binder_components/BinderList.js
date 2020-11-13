@@ -1,5 +1,5 @@
 import React from 'react';
-import Binder from "../components/BinderShow";
+import Binder from "../binder_components/BinderShow";
 import { Route, Link } from "react-router-dom";
 
 const BinderList = (props) => {

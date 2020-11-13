@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { addDoc } from "../actions/addDoc";
+import { addDoc } from "../../actions/doc_actions/addDoc";
 
 class DocumentForm extends React.Component {
 

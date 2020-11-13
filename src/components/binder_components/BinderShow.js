@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
-import DocumentsContainer from "../containers/DocumentsContainer";
-import LinksContainer from "../containers/LinksContainer";
-import NotesContainer from "../containers/NotesContainer";
+import DocumentsContainer from "../../containers/DocumentsContainer";
+import LinksContainer from "../../containers/LinksContainer";
+import NotesContainer from "../../containers/NotesContainer";
 
 const Binder = (props) => {
 

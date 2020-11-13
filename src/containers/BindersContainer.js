@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import {fetchBinders}from '../actions/fetchBinders'
-import BinderForm from '../components/BinderForm'
-import BinderList from '../components/BinderList'
+import {fetchBinders}from '../actions/binder_actions/fetchBinders'
+import BinderForm from '../components/binder_components/BinderForm'
+import BinderList from '../components/binder_components/BinderList'
 import { Route, Switch } from "react-router-dom";
-import BinderShow from '../components/BinderShow'
+import BinderShow from '../components/binder_components/BinderShow'
 
 class BindersContainers extends React.Component {
 
