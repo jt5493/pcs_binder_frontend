@@ -17,7 +17,7 @@ const DocumentList = (props) => {
                 <li key={document.id}>
                     {document.title}: {document.doc_path}
                     <br/>
-                    <button onClick={() => handleOnClick(document)}>
+                    <button type="button" class="btn btn-danger" onClick={() => handleOnClick(document)}>
                         Delete
                     </button>
                 </li>

@@ -30,7 +30,7 @@ class NoteForm extends React.Component {
                     <input type='text' placeholder='Note Title' name="title" value={this.state.title} onChange={this.handleOnChange}/><br/>
                     <label>Note Content:</label>
                     <input type='text' placeholder='Note Content' name="content" value={this.state.content} onChange={this.handleOnChange}/><br/>
-                    <input type="submit"/>
+                    <input type="submit" className="btn btn-success" value="Submit"/>
                 </form>
             </div>
         )

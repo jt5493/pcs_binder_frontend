@@ -30,7 +30,7 @@ class DocumentForm extends React.Component {
                     <input type='text' placeholder='Document Title' name="title" value={this.state.title} onChange={this.handleOnChange}/><br/>
                     <label>Document Path:</label>
                     <input type='text' placeholder='Paste Document Path' name="doc_path" value={this.state.doc_path} onChange={this.handleOnChange}/><br/>
-                    <input type="submit"/>
+                    <input type="submit" className="btn btn-success" value="Submit"/>
                 </form>
             </div>
         )

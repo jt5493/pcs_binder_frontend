@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { connect } from 'react-redux'
-
+import NavBar from "./components/NavBar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import BindersContainer from './containers/BindersContainer'
 
 class App extends React.Component {
@@ -12,20 +12,16 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          
-          <BindersContainer />
+          <NavBar />
         </header>
+        
+          <BindersContainer />
+       
       </div>
     );
   }
   
 }
-
-// const mapStateToProps = (state) => {
-//   return {
-//     accounts: state.binders
-//   }
-// }
 
 
 export default App;

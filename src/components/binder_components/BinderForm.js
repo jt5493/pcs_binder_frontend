@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { addBinder } from "../../actions/binder_actions/addBinder";
+import { withRouter } from 'react-router-dom';
 
 class BinderForm extends React.Component {
 
@@ -18,6 +19,7 @@ class BinderForm extends React.Component {
         
         this.props.addBinder(this.state)
         this.setState({title: ''})
+        this.props.history.push('/binders')
     }
 
 
@@ -27,11 +29,11 @@ class BinderForm extends React.Component {
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Binder Title: </label>
                     <input type='text' placeholder='Binder Title' name="title" value={this.state.title} onChange={this.handleOnChange}/>
-                    <input type="submit"/>
+                    <input type="submit" className="btn btn-success" />
                 </form>
             </div>
         )
     }
 }
 
-export default connect(null, {addBinder})(BinderForm)
+export default withRouter(connect(null, {addBinder})(BinderForm))

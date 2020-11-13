@@ -30,7 +30,7 @@ class LinkForm extends React.Component {
                     <input type='text' placeholder='Link Title' name="title" value={this.state.title} onChange={this.handleOnChange}/><br/>
                     <label>URL:</label>
                     <input type='text' placeholder='Paste URL' name="url" value={this.state.url} onChange={this.handleOnChange}/><br/>
-                    <input type="submit"/>
+                    <input type="submit" className="btn btn-success" value="Submit"/>
                 </form>
             </div>
         )

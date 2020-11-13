@@ -16,7 +16,7 @@ const NoteList = (props) => {
                 <li key={note.id}>
                     {note.title}: {note.content}
                     <br/>
-                    <button onClick={() => handleOnClick(note)}>
+                    <button type="button" class="btn btn-danger" onClick={() => handleOnClick(note)}>
                         Delete
                     </button>
                 </li>
