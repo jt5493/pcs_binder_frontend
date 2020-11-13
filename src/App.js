@@ -14,9 +14,9 @@ class App extends React.Component {
         <header className="App-header">
           <NavBar />
         </header>
-        
+        <div className="Container">
           <BindersContainer />
-       
+        </div>
       </div>
     );
   }

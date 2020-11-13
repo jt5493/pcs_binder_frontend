@@ -16,7 +16,7 @@ const LinkList = (props) => {
                 <li key={link.id}>
                     {link.title}: {link.url}
                     <br/>
-                    <button type="button" class="btn btn-danger" onClick={() => handleOnClick(link)}>
+                    <button type="button" className="btn btn-danger" onClick={() => handleOnClick(link)}>
                         Delete
                     </button>
                 </li>

@@ -1,22 +1,32 @@
 .App {
   text-align: left;
-  color: rgb(190, 194, 190);
+  color: rgb(7, 7, 7);
   font-size: calc(10px + 2vmin);
   background-color: #282c34;
+  background-image: url('https://i.pinimg.com/originals/7f/0c/84/7f0c841028f0c08b8bf3e40d25e3efaa.jpg');
   display: flex;
   flex-direction: column;
   align-items: top-left;
   justify-content: top;
   min-height: 100vh;
   border: 20px solid #282c34;
+  border-style: hidden;
   
+  background-repeat: repeat-y;
+  left: 40px
 }
 
+.Container {
+  left: 90px;
+  position:relative;
+  border-right-width: 20000px;
+  border-style: hidden;
+}
 
 
 .App-header {
   background-color: #282c34;
-  min-height: 10vh;
+  min-height: 1vh;
   display: flex;
   flex-direction: column;
   align-items: left;
