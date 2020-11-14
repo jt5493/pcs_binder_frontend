@@ -6,7 +6,7 @@ export default function binderReducer(state = {binders: []}, action) {
                 binders: action.payload.data
             }
         case 'ADD_BINDER':
-            return {...state, binders: [...state.binders, action.payload]}  
+            return {...state, binders: [...state.binders, action.payload.data]}  
             
         case 'ADD_RESOURCE':
             let binders = state.binders.map(binder => {

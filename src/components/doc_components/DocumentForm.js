@@ -14,6 +14,7 @@ class DocumentForm extends React.Component {
     }
 
     handleOnSubmit = (event) => {
+        
         event.preventDefault()
         
         this.props.addDoc(this.state, this.props.binder.id)

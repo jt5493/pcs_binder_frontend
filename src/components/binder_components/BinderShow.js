@@ -8,15 +8,15 @@ const Binder = (props) => {
 
 
    
-    let binder = props.binders.find(b => b.id === props.match.params.id)
+    let binder = props.binders ? props.binders.find(b => b.id === props.match.params.id) : null
 
-
+    
     return (
         <div>
-            <h1>{binder ? binder.attributes.title : null}</h1>
-            <DocumentsContainer binder={binder} /> <br/>
-            <LinksContainer binder={binder}/><br/>
-            <NotesContainer binder={binder}/><br/>
+            <h1>{binder ? binder.attributes.title : binder.title}</h1>
+            <DocumentsContainer binder={binder ? binder : null} /> <br/>
+            <LinksContainer binder={binder ? binder : null}/><br/>
+            <NotesContainer binder={binder ? binder : null}/><br/>
         </div>
     )
 
