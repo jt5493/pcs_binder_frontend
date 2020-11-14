@@ -24,6 +24,7 @@ Open repository in developement environment and navigate to the directory in com
 ## Built With
 
 * Rails (backend)
+* PostgreSQL
 * CSS
 * Javascript
 * React
