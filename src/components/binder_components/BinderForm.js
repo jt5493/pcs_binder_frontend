@@ -10,7 +10,7 @@ class BinderForm extends React.Component {
     handleOnChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
-            // (video 6): use the name attribute given to the input to assign a new value to the key that name equals
+            //  use the name attribute given to the input to assign a new value to the key that name equals
         })
     }
 
